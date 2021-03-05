@@ -6,7 +6,9 @@ const Register = () => import("../views/Register");
 const Search = () => import("../views/Search");
 // const Detail = () => import("../views/Detail");
 // const AddCartSuccess = () => import("../views/AddCartSuccess");
-// const ShopCart = () => import("../views/ShopCart");
+const ShopCart = () => import("../views/ShopCart");
+const Order = () => import("../views/Order");
+const HelpCenter = () => import("../views/HelpCenter");
 // const Trade = () => import("../views/Trade");
 // const Pay = () => import("../views/Pay");
 // const PaySuccess = () => import("../views/PaySuccess");
@@ -35,6 +37,21 @@ const routes = [
     name: "Search",
     component: Search,
   },
+  {
+    path: "/shopCart",
+    name: "ShopCart",
+    component: ShopCart,
+  },
+  {
+    path: "/order",
+    name: "Order",
+    component: Order,
+  },
+  {
+    path: "/helpcenter",
+    name: "HelpCenter",
+    component: HelpCenter,
+  }
 ];
 
 const router = new VueRouter({
