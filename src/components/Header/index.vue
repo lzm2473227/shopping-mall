@@ -13,7 +13,15 @@
           </div>
         </div>
         <div class="type-list">
-          <router-link to="/shopcart">购物车</router-link>
+          <router-link to="/shopcart" class="shopcart">
+            <img
+              src="../../assets/images/home/ic-购物车.png"
+              class="icon-shopcart"
+              alt="购物车"
+            />
+            购物车<span>0</span>
+            <div class="triangle"></div>
+          </router-link>
           <i class="site-nav-pipe">|</i>
           <router-link to="/order">我的订单</router-link>
           <i class="site-nav-pipe">|</i>
@@ -23,32 +31,40 @@
     </div>
     <div class="header-center">
       <div class="logo-content">
-        <h1 class="logo">
+        <div class="logo">
           <router-link to="/">
-            <img src="../../assets/logo.png" alt="正品汇logo" />
+            <img src="../../assets/images/home/logo.png" alt="正品汇logo" />
           </router-link>
-        </h1>
+          <div class="logo-text">
+            <h1>正品汇</h1>
+            <div>kaihua.com</div>
+          </div>
+        </div>
       </div>
       <div class="location header-active">
-        <i></i>
-        深圳市
+        <img src="../../assets/images/home/ic-定位.png" alt="" />
+        <span>深圳市</span>
       </div>
       <div class="header-search">
         <form action="" class="search-form">
           <input
             type="text"
             id="autocomplete"
-            class="sui-btn btn-xlarge btn-danger"
             placeholder="请输入名称、货号、规格、品牌、商家名称进行搜索"
           />
-          <button class="sui-btn btn-xlarge btn-danger" type="button">
-            搜索
+          <button class="btn-danger" type="button">
+            <img src="../../assets/images/home/ic-搜索.png" alt="" />
+            <span>搜索</span>
           </button>
         </form>
       </div>
     </div>
     <div class="header-bottom">
-      <div class="classify">全部商品分类</div>
+      <div class="classify">
+        <img src="../../assets/images/home/ic-分类.png" alt="" />
+        全部商品分类
+        <img src="../../assets/images/home/ic-返回.png" alt="" />
+      </div>
       <ul>
         <li>正品荟萃</li>
         <li>学习之窗</li>
@@ -58,8 +74,17 @@
         <li>联系我们</li>
       </ul>
       <div class="quality">
-        <div><i></i>正品保障</div>
-        <div><i></i>一战式进货</div>
+        <div>
+          <img src="../../assets/images/home/ic-正品保障.png" alt="正品保障" />
+          正品保障
+        </div>
+        <div>
+          <img
+            src="../../assets/images/home/ic-一站式进货.png"
+            alt="一战进货"
+          />
+          一战式进货
+        </div>
       </div>
     </div>
   </header>
@@ -74,14 +99,12 @@ export default {
 <style lang="less" scoped>
 .header {
   height: 250px;
-  // background-color: rgb(199, 142, 142);
-  font-family: Roboto-regular;
   font-size: 16px;
 }
 .header-top {
   background-color: #f5f5f5;
-  line-height: 47px;
-  height: 47px;
+  line-height: 46px;
+  height: 46px;
 }
 .header-container {
   display: flex;
@@ -91,7 +114,23 @@ export default {
   align-items: center;
   font-size: 16px;
 }
-
+.triangle {
+  border-width: 7px 4px;
+  border-color: #888888 transparent transparent;
+  border-style: solid;
+  margin-top: 9px;
+}
+.shopcart {
+  display: flex;
+  align-items: center;
+  span {
+    color: #e80c00;
+    padding-right: 8px;
+  }
+}
+.icon-shopcart {
+  padding-right: 4px;
+}
 .login-list,
 .align {
   display: flex;
@@ -104,14 +143,20 @@ export default {
   color: red;
 }
 .login-list p {
-  margin-right: 10px;
+  margin-right: 40px;
 }
 .site-nav-pipe {
   color: #ddd;
 }
+.type-list {
+  display: flex;
+}
 .type-list a {
-  padding: 0 10px;
+  padding: 0 24.5px;
   color: #888888;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 1;
 }
 .register {
   padding: 0 5px;
@@ -119,53 +164,106 @@ export default {
 }
 .header-center {
   width: 1200px;
-  // background-color: rgb(238, 187, 151);
   margin: 0 auto;
   display: flex;
-  height: calc(216px - 47px);
+  height: 158px;
   justify-content: space-between;
   align-items: center;
   vertical-align: middle;
   .logo {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 210px;
+    width: 220px;
     img {
-      height: calc(216px - 24px - 47px);
+      height: 88px;
+      width: 88px;
+      padding: 30px 12px 40px 19px;
     }
   }
 }
+.logo-text {
+  height: 90px;
+  h1 {
+    width: 96px;
+    height: 42px;
+    font-size: 32px;
+    font-family: Microsoft YaHei;
+    line-height: 42px;
+    color: #333333;
+  }
+  div {
+    width: 98px;
+    height: 24px;
+    font-size: 18px;
+    font-family: Microsoft YaHei;
+    line-height: 24px;
+    color: #333333;
+    padding: 8px 0;
+  }
+}
 .location {
-  width: 80px;
-  height: 30px;
-  border: 1px solid #ddd;
-  line-height: 30px;
-  text-align: center;
+  width: 123px;
+  height: 42px;
+  border: 1px solid #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 74px;
+  img {
+    width: 22px;
+    height: 22px;
+  }
+  span {
+    width: 49px;
+    height: 21px;
+    line-height: 24px;
+    color: #e80c00;
+  }
 }
 form {
   display: flex;
-}
-h1 {
-  font-size: 18px;
+  width: 745px;
+  height: 60px;
 }
 .header-search {
   input {
-    box-sizing: border-box;
-    width: calc(640px - 320px - 98px + 463px);
-    height: 56px;
-    padding: 0px 4px;
-    border: 2px solid #ea4a36;
-    text-indent: 19px;
+    width: calc(745px - 110px);
+    text-indent: 20px;
+    border: 2px solid #e80c00;
   }
   button {
-    height: 56px;
-    width: 98px;
-    background-color: #ea4a36;
-    border: none;
+    width: 110px;
+    height: 60px;
+    background: #e80c00;
     color: #fff;
     cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 16px;
+      height: 16px;
+      padding-right: 8px;
+    }
+    span {
+      width: 32px;
+      height: 21px;
+      line-height: 21px;
+      color: #ffffff;
+    }
   }
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999999;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+::-moz-placeholder {
+  color: #999999;
 }
 .header-bottom {
   width: 1200px;
@@ -176,6 +274,8 @@ h1 {
     justify-content: space-evenly;
     align-items: center;
     width: 766px;
+    padding-right: 25px;
+    box-sizing: border-box;
     li {
       color: black;
       font-size: 18px;
@@ -184,13 +284,13 @@ h1 {
 }
 .classify {
   width: 218px;
-  background-color: rgb(58, 54, 54);
+  background-color: #3f3c3c;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  height: 34px;
+  height: 46px;
   font-size: 20px;
-  color: rgb(235, 224, 224);
+  color: #ffffff;
 }
 .quality {
   display: flex;
@@ -199,6 +299,13 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 25px;
+  div {
+    display: flex;
+    img {
+      width: 18px;
+      height: 18px;
+      padding-right: 7px;
+    }
+  }
 }
 </style>
