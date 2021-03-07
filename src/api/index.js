@@ -1,5 +1,5 @@
 // import request from "@utils/request";
-import mockRequest from "../utils/mockRequest";
+import mockRequest from "@/utils/mockRequest";
 //获取首页三级分类
 
 // export const reqGetBaseList = () => {

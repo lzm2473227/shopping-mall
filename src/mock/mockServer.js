@@ -11,3 +11,13 @@ Mock.mock("/mock/banners", "get", {
 //   code: 200,
 //   "data|2": floors,
 // });
+// Mock.mock('/mock/banners',{code:200,data:banners})
+
+
+
+// [
+//   {
+//     "id|+1": 1,
+//     "imgUrl": "@image('738x519','@color')"
+//   }
+// ]
