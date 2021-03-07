@@ -100,6 +100,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.footer {
+  border-top: 1px solid #dddddd;
+}
 .footer-container {
   width: 1200px;
   box-sizing: border-box;
@@ -109,7 +112,6 @@ export default {
 .footer-top {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
   margin: 30px 0;
   .brand {
     display: flex;
@@ -134,7 +136,6 @@ export default {
 .footerList {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
 }
 .footerItem h4 {
   height: 21px;
