@@ -1,6 +1,6 @@
 [
   {
     "id|+1": 1,
-    "imgUrl": "Random.image('738x519','@color')"
+    "imgUrl": "@Image('738x519','#ddd')"
   }
 ]

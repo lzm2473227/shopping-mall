@@ -12,7 +12,7 @@ import mockRequest from "@/utils/mockRequest";
 export const reqGetBanners = () => {
   return mockRequest({
     method: "GET",
-    url: "/banners"
+    url: "/rbanners"
   });
 };
 //获取首页楼层数据

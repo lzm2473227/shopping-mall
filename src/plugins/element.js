@@ -1,7 +1,8 @@
 import Vue from "vue";
-import { Button, Steps, Carousel, CarouselItem } from "element-ui";
+import { Button,  Carousel, CarouselItem } from "element-ui";
 
 Vue.use(Button);
-Vue.use(Steps);
+// Vue.use(Steps);
+// Vue.use(Step);
 Vue.use(Carousel);
 Vue.use(CarouselItem);

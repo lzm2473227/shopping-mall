@@ -64,9 +64,16 @@
         </div>
       </div>
       <div class="homr-center">
-        <el-carousel height="519px" :autoplay="true">
+        <el-carousel
+          height="519px"
+          :autoplay="true"
+          arrow="never"
+          indicator-position="none"
+        >
           <el-carousel-item v-for="item in bannerlist" :key="item.id">
-            <h3>{{ item.imageUrl }}</h3>
+            <div>
+              <img :src="item.imgUrl" alt="轮播图" />
+            </div>
           </el-carousel-item>
         </el-carousel>
       </div>
@@ -90,14 +97,14 @@ export default {
   name: "Home",
   data() {
     return {
-      bannerlist: [],  //轮播图
+      bannerlist: [], //轮播图
     };
   },
   methods: {
     async banner() {
       const result = await this.$API.reqGetBanners();
       console.log(result);
-      this.bannerlist = result
+      this.bannerlist = result;
     },
   },
   mounted() {
@@ -165,10 +172,6 @@ export default {
   width: 738px;
   border: 1px solid red;
   margin: 0 12px;
-  img {
-    // width: 100%;
-    // height: 100%;
-  }
 }
 .home-bottom {
   width: 218px;

@@ -110,6 +110,7 @@ export default {
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  height: 46px;
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
@@ -169,7 +170,6 @@ export default {
   height: 158px;
   justify-content: space-between;
   align-items: center;
-  vertical-align: middle;
   .logo {
     display: flex;
     align-items: center;
@@ -186,8 +186,8 @@ export default {
   h1 {
     width: 96px;
     height: 42px;
+    line-height: 106px;
     font-size: 32px;
-    font-family: Microsoft YaHei;
     line-height: 42px;
     color: #333333;
   }
@@ -195,20 +195,21 @@ export default {
     width: 98px;
     height: 24px;
     font-size: 18px;
-    font-family: Microsoft YaHei;
     line-height: 24px;
     color: #333333;
-    padding: 8px 0;
+    padding-top: 15px;
   }
 }
 .location {
   width: 123px;
   height: 42px;
   border: 1px solid #efefef;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 74px;
+  // margin-top: -5px;
   img {
     width: 22px;
     height: 22px;
