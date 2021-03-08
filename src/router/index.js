@@ -32,20 +32,11 @@ const routes = [
     path: "/register",
     name: "Register",
     component: Register,
-    children: [
-      {
-        path: "/registershop",
-        name: "RegisterShop",
-        component: RegisterShop,
-        meta: {
-          isHideHeader: true
-        },
-      }
-    ],
     meta: {
-      isHideHeader: true
+      isHideHeader: true,
     },
   },
+
   {
     path: "/search",
     name: "Search",
@@ -65,7 +56,7 @@ const routes = [
     path: "/helpcenter",
     name: "HelpCenter",
     component: HelpCenter,
-  }
+  },
 ];
 
 const router = new VueRouter({

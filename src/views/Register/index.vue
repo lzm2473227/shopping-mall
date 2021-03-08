@@ -1,7 +1,7 @@
 <template>
   <div>
     <RegisterHeader />
-    <div class="register">
+    <div class="register" v-if="isShow">
       <div class="register-top">
         <div class="progress-first">
           <span class="num">1</span>
@@ -20,7 +20,6 @@
           v-model="phone"
           name="phone"
         />
-        <!-- <span class="error-msg">{{ errors.first("phone") }}</span> -->
       </div>
       <div class="content code">
         <label>验证码：</label>
@@ -30,22 +29,22 @@
           v-model="code"
           name="code"
         />
-        <!-- <span class="error-msg">{{ errors.first("code") }}</span> -->
       </div>
       <div class="controls">
         <input type="checkbox" v-model="isAgree" name="isAgree" />
         <span>同意协议并注册<span class="a">《正品汇用户协议》</span> </span>
-        <!-- <span class="error-msg">{{ errors.first("isAgree") }}</span> -->
       </div>
       <div class="btn">
         <button @click="next">下一步</button>
       </div>
     </div>
+    <RegisterShop v-else />
   </div>
 </template>
 
 <script>
-import RegisterHeader from "@/views/Register/RegisterHeader";
+import RegisterHeader from "@/components/RegisterHeader";
+import RegisterShop from "@/views/Register/RegisterShop";
 export default {
   name: "Register",
   data() {
@@ -53,13 +52,17 @@ export default {
       phone: "", //手机号
       code: "", //验证码
       isAgree: true, //默认同意勾选
+      isShow: true,
     };
   },
   methods: {
-    next() {},
+    next() {
+      this.isShow = false;
+    },
   },
   components: {
     RegisterHeader,
+    RegisterShop,
   },
 };
 </script>
