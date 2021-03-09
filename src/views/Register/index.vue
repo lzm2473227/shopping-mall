@@ -77,7 +77,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 70px 0 86px 0;
+    padding: 61px 0 50px 0;
     color: #fff;
   }
 }
@@ -102,7 +102,6 @@ export default {
 span.a {
   color: #4a90e2;
 }
-
 .progress {
   width: 228px;
   height: 5px;
@@ -112,6 +111,9 @@ span.a {
   width: 228px;
   height: 5px;
   background: #7bbc52;
+  .active.text {
+    color: #7bbc52;
+  }
 }
 .num {
   width: 24px;
@@ -129,7 +131,9 @@ span.a {
 .register-top .text {
   margin-top: 20px;
   text-align: center;
+  color: #cccccc;
 }
+
 .content label {
   display: inline-block;
   width: 64px;

@@ -57,6 +57,10 @@ const routes = [
     name: "HelpCenter",
     component: HelpCenter,
   },
+  {
+    path: '/',
+    redirect: '/'
+  }
 ];
 
 const router = new VueRouter({
