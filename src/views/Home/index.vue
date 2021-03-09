@@ -103,7 +103,7 @@ export default {
   methods: {
     async banner() {
       const result = await this.$API.reqGetBanners();
-      console.log(result);
+      // console.log(result);
       this.bannerlist = result;
     },
   },

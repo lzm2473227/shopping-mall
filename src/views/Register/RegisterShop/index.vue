@@ -108,7 +108,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 61px 0 45px 0;
+    padding: 61px 0 30px 0;
     color: #fff;
   }
 }

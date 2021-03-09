@@ -12,7 +12,9 @@
           </div>
         </div>
       </div>
-      <div class="welcome">欢迎注册</div>
+      <div>
+        <div class="welcome">欢迎注册</div>
+      </div>
     </div>
   </div>
 </template>
@@ -20,10 +22,20 @@
 <script>
 export default {
   name: "RegisterHeader",
+  data() {
+    return {
+      // isRegister: '欢迎注册',
+      // isLogin: '欢迎登录！',
+    };
+  },
+  methods: {},
+  mounted() {
+    // this.isRegister = "欢迎登录！"
+  },
 };
 </script>
 
-.<style lang="less" scoped>
+<style lang="less" scoped>
 .header-center {
   width: 1200px;
   margin: 0 auto;
