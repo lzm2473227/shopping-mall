@@ -29,9 +29,7 @@ export default {
     };
   },
   methods: {},
-  mounted() {
-    // this.isRegister = "欢迎登录！"
-  },
+  mounted() {},
 };
 </script>
 
