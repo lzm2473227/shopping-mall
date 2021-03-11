@@ -4,6 +4,7 @@ const Home = () => import("../views/Home");
 const Login = () => import("../views/Login");
 const Register = () => import("../views/Register");
 const Brand = () => import("../views/Brand");
+const Learning = () => import("../views/Learning");
 const Search = () => import("../views/Search");
 // const Detail = () => import("../views/Detail");
 // const AddCartSuccess = () => import("../views/AddCartSuccess");
@@ -45,6 +46,11 @@ const routes = [
     component: Brand,
   },
   {
+    path: "/learning",
+    name: "Learning",
+    component: Learning,
+  },
+  {
     path: "/search",
     name: "Search",
     component: Search,
@@ -65,9 +71,9 @@ const routes = [
     component: HelpCenter,
   },
   {
-    path: '/',
-    redirect: '/'
-  }
+    path: "/",
+    redirect: "/",
+  },
 ];
 
 const router = new VueRouter({

@@ -67,7 +67,7 @@
       </div>
       <ul>
         <router-link to="/brand"><li>正品荟萃</li></router-link>
-        <li>学习之窗</li>
+        <router-link to="/learning"><li>学习之窗</li></router-link>
         <li>物流轨迹</li>
         <li>保单查询</li>
         <li>合作加盟</li>
