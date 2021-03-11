@@ -48,40 +48,49 @@
             <p style="width: 0px; height: 24px; border: 1px solid #dddddd"></p>
             <p class="active">账户登录</p>
           </div>
-          <div class="inp">
-            <div class="inp-id">
-              <div class="icon-img">
-                <img src="@/assets/images/ic-账号.png" alt="账号" />
+          <div class="outer">
+            <div class="inp">
+              <div class="inp-id">
+                <div class="icon-img">
+                  <img src="@/assets/images/ic-账号.png" alt="账号" />
+                </div>
+                <input type="text" placeholder="请输入账号" />
               </div>
-              <input type="text" placeholder="请输入账号" />
-            </div>
-            <div class="inp-id">
-              <div class="icon-img">
-                <img src="@/assets/images/ic-密码.png" alt="密码" />
-              </div>
-              <input
-                type="password"
-                placeholder="请输入动态密码"
-                name="pass"
-                id="pass"
-              />
-              <div class="icon-show" @click="show">
-                <img
-                  id="show"
-                  src="../../assets/images/ic-隐藏密码.png"
-                  alt="隐藏密码"
+              <div class="inp-id">
+                <div class="icon-img">
+                  <img src="@/assets/images/ic-密码.png" alt="密码" />
+                </div>
+                <input
+                  type="password"
+                  placeholder="请输入动态密码"
+                  name="pass"
+                  id="pass"
                 />
+                <div class="icon-show" v-if="isShow" @click="show">
+                  <img
+                    id="show"
+                    src="../../assets/images/ic-隐藏密码.png"
+                    alt="隐藏密码"
+                  />
+                </div>
+                <div class="icon-show" v-if="!isShow" @click="hide">
+                  <img
+                    id="hide"
+                    src="../../assets/images/ic-显示密码.png"
+                    alt="显示密码"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div class="btn">
-            <button>登录</button>
-          </div>
-          <div class="sign-up">
-            <div class="at-once">
-              <router-link to="/register">立即注册</router-link>
+            <div class="btn" @click="rep">
+              <button>登录</button>
             </div>
-            <img src="../../assets/images/ic-去注册.png" alt="去注册" />
+            <div class="sign-up">
+              <div class="at-once">
+                <router-link to="/register">立即注册</router-link>
+              </div>
+              <img src="../../assets/images/ic-去注册.png" alt="去注册" />
+            </div>
           </div>
         </div>
       </div>
@@ -94,16 +103,31 @@
 export default {
   name: "Login",
   data() {
-    return {};
+    return {
+      isShow: true,
+    };
   },
   methods: {
+    //点击密码显示
     show() {
-      // var pass = document.getElementById("pass");
-      // pass.type = "text";
+      var pass = document.getElementById("pass");
+      pass.type = "text";
       // console.log(pass);
-      // var imgs = document.getElementById("show");
-      // imgs.src= 
+      this.isShow = false;
+      // console.log(this.$router);
+    },
+    //点击密码隐藏
+    hide() {
+      var pass = document.getElementById("pass");
+      pass.type = "password";
+      // console.log(pass);
+      this.isShow = true;
+      // let imgs = document.getElementById("hide");
       // console.log(imgs);
+    },
+    //登录跳转到首页
+    rep() {
+      this.$router.replace("/");
     },
   },
   mounted() {},

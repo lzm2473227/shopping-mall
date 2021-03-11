@@ -101,6 +101,7 @@ export default {
     };
   },
   methods: {
+    //首页的轮播图
     async banner() {
       const result = await this.$API.reqGetBanners();
       // console.log(result);

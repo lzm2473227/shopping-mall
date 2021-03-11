@@ -66,8 +66,8 @@
           我们的业务员将在五个工作日内 与您的注册手机号联系
         </div>
       </div>
-      <div class="suc-bottom">
-        <button @click="toHome"><router-link to="/">确定</router-link></button>
+      <div class="suc-bottom" @click="toHome">
+        <router-link to="/">确定</router-link>
       </div>
     </div>
   </div>
@@ -272,19 +272,19 @@ textarea::-webkit-input-placeholder {
   padding: 20px 0 0;
 }
 .suc-bottom {
-  display: flex;
-  justify-content: center;
-  button {
+  text-align: center;
+  width: 100px;
+  height: 44px;
+  line-height: 44px;
+  margin: 0 auto;
+  a {
+    display: block;
     width: 100px;
     height: 44px;
     background: #e53935;
     border-radius: 4px;
     margin: 40px 0;
-    border: none;
-    outline: none;
-    a {
-      color: #fff;
-    }
+    color: #fff;
   }
 }
 </style>

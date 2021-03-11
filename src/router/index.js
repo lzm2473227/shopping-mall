@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 const Home = () => import("../views/Home");
 const Login = () => import("../views/Login");
 const Register = () => import("../views/Register");
-// const RegisterShop = () => import("../views/Register/RegisterShop");
+const Brand = () => import("../views/Brand");
 const Search = () => import("../views/Search");
 // const Detail = () => import("../views/Detail");
 // const AddCartSuccess = () => import("../views/AddCartSuccess");
@@ -39,7 +39,11 @@ const routes = [
       isHideHeader: true,
     },
   },
-
+  {
+    path: "/brand",
+    name: "Brand",
+    component: Brand,
+  },
   {
     path: "/search",
     name: "Search",

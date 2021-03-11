@@ -66,7 +66,7 @@
         <img src="../../assets/images/home/ic-返回.png" alt="" />
       </div>
       <ul>
-        <li>正品荟萃</li>
+        <router-link to="/brand"><li>正品荟萃</li></router-link>
         <li>学习之窗</li>
         <li>物流轨迹</li>
         <li>保单查询</li>
@@ -209,7 +209,6 @@ export default {
   justify-content: center;
   align-items: center;
   margin-right: 74px;
-  // margin-top: -5px;
   img {
     width: 22px;
     height: 22px;
@@ -280,6 +279,7 @@ textarea::-webkit-input-placeholder {
     li {
       color: black;
       font-size: 18px;
+      cursor: pointer;
     }
   }
 }
