@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import RegisterHeader from "@/components/RegisterHeader";
+import RegisterHeader from "@/views/Register/RegisterHeader";
 import RegisterShop from "@/views/Register/RegisterShop";
 export default {
   name: "Register",
