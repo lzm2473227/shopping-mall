@@ -1,5 +1,9 @@
 <template>
-  <div class="search">搜索</div>
+  <div class="search">
+    <div class="sea-outer">
+      <div>全部结果 > "茅台" <span>X</span></div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -8,5 +12,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
+
 </style>

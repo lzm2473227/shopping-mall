@@ -46,14 +46,16 @@
         </ul>
       </div>
       <div class="footerList">
-        <div class="footerItem">
-          <h4>关于我们</h4>
-          <ul class="footerItemCon">
-            <li>关于正品汇</li>
-            <li>联系正品汇</li>
-            <li>正品汇文化</li>
-          </ul>
-        </div>
+        <router-link to="/helpcenter">
+          <div class="footerItem">
+            <h4>关于我们</h4>
+            <ul class="footerItemCon">
+              <li>关于正品汇</li>
+              <li>联系正品汇</li>
+              <li>正品汇文化</li>
+            </ul>
+          </div>
+        </router-link>
         <div class="footerItem">
           <h4>新手入门</h4>
           <ul class="footerItemCon">

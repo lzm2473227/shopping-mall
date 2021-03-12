@@ -6,6 +6,7 @@ const Register = () => import("../views/Register");
 const Brand = () => import("../views/Brand");
 const Learning = () => import("../views/Learning");
 const Search = () => import("../views/Search");
+const LearnDetails = () => import("../views/Learning/LearnDetails");
 // const Detail = () => import("../views/Detail");
 // const AddCartSuccess = () => import("../views/AddCartSuccess");
 const ShopCart = () => import("../views/ShopCart");
@@ -49,6 +50,11 @@ const routes = [
     path: "/learning",
     name: "Learning",
     component: Learning,
+    children: [{
+      path: "learndetails",
+      name: "LearnDetails",
+      component: LearnDetails,
+    }]
   },
   {
     path: "/search",
