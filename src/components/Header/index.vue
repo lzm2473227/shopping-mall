@@ -52,7 +52,7 @@
             id="autocomplete"
             placeholder="请输入名称、货号、规格、品牌、商家名称进行搜索"
           />
-          <button class="btn-danger" type="button">
+          <button class="btn-danger" type="button" @click="toSearch">
             <img src="../../assets/images/home/ic-搜索.png" alt="" />
             <span>搜索</span>
           </button>
@@ -93,6 +93,14 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {};
+  },
+  methods: {
+    toSearch() {
+      this.$router.replace("/search");
+    },
+  },
 };
 </script>
 
@@ -308,5 +316,8 @@ textarea::-webkit-input-placeholder {
       padding-right: 7px;
     }
   }
+}
+.btn-danger {
+  outline: none;
 }
 </style>
