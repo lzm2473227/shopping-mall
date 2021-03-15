@@ -12,6 +12,7 @@ const LearnDetails = () => import("../views/Learning/LearnDetails");
 const ShopCart = () => import("../views/ShopCart");
 const Order = () => import("../views/Order");
 const HelpCenter = () => import("../views/HelpCenter");
+const Plant = () => import("../views/Plant");
 // const Trade = () => import("../views/Trade");
 // const Pay = () => import("../views/Pay");
 // const PaySuccess = () => import("../views/PaySuccess");
@@ -75,6 +76,11 @@ const routes = [
     path: "/helpcenter",
     name: "HelpCenter",
     component: HelpCenter,
+  },
+  {
+    path: "/plant",
+    name: "Plant",
+    component: Plant,
   },
   {
     path: "/",
