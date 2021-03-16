@@ -1,14 +1,14 @@
 <template>
   <div class="learning">
-    <div class="content">
+    <div id="a" class="content" v-if="isShow">
       <div class="con">
         <div>视频</div>
         <div class="message">
           <span class="big">2021年度茅台酒生产“第一碗酒” 出来</span>
           <span>2021/01/19 09:56:05</span>
         </div>
-        <div class="to-view">
-          <router-link to="/">查看详情</router-link>
+        <div class="to-view" @click="show">
+          <router-link to="/learning/learndetails">查看详情</router-link>
         </div>
       </div>
       <div class="con">
@@ -18,7 +18,7 @@
           <span>2021/01/19 09:56:05</span>
         </div>
         <div class="to-view">
-          <router-link to="/">查看详情</router-link>
+          <router-link to="/learning/learndetails">查看详情</router-link>
         </div>
       </div>
       <div class="con">
@@ -28,7 +28,7 @@
           <span>2021/01/19 09:56:05</span>
         </div>
         <div class="to-view">
-          <router-link to="/">查看详情</router-link>
+          <router-link to="/learning/learndetails">查看详情</router-link>
         </div>
       </div>
       <div class="con">
@@ -38,16 +38,29 @@
           <span>2021/01/19 09:56:05</span>
         </div>
         <div class="to-view">
-          <router-link to="/">查看详情</router-link>
+          <router-link to="/learning/learndetails">查看详情</router-link>
         </div>
       </div>
     </div>
+    <router-view v-if="!isShow"></router-view>
   </div>
 </template>
 
 <script>
 export default {
   name: "Learning",
+  data() {
+    return {
+      isShow: true,
+    };
+  },
+  methods: {
+    show() {
+      const con = document.querySelector(".content");
+      console.log(con);
+      this.isShow = false;
+    },
+  },
 };
 </script>
 

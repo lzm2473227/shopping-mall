@@ -10,7 +10,7 @@
       </div>
       <div class="typebrand">
         <div class="con">
-          <div class="con-img">
+          <div class="con-img" @click="toFactory">
             <img
               src="../../assets/images/企业微信截图_20210311155617.png"
               alt=""
@@ -153,6 +153,10 @@ export default {
     handleCurrentChange(v) {
       console.log(v);
     },
+    //跳转进入工厂详情页
+    toFactory() {
+      this.$router.replace("/plant");
+    },
   },
 };
 </script>
@@ -200,7 +204,6 @@ export default {
 .typebrand {
   display: flex;
   justify-content: space-between;
-  // align-content: space-between;
   flex-wrap: wrap;
   margin: 20px;
   .con {
@@ -210,6 +213,7 @@ export default {
     align-items: center;
     width: 281px;
     padding-bottom: 20px;
+    cursor: pointer;
     span {
       width: 80px;
       height: 26px;

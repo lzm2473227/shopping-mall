@@ -7,6 +7,7 @@ const Brand = () => import("../views/Brand");
 const Learning = () => import("../views/Learning");
 const Search = () => import("../views/Search");
 const LearnDetails = () => import("../views/Learning/LearnDetails");
+// import LearnDetails from "../views/Learning/LearnDetails"
 // const Detail = () => import("../views/Detail");
 // const AddCartSuccess = () => import("../views/AddCartSuccess");
 const ShopCart = () => import("../views/ShopCart");
@@ -52,7 +53,7 @@ const routes = [
     name: "Learning",
     component: Learning,
     children: [{
-      path: "learndetails",
+      path: 'learndetails',
       name: "LearnDetails",
       component: LearnDetails,
     }]

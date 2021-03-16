@@ -177,7 +177,7 @@ export default {
 .home-bottom {
   width: 218px;
   border-top: 6px solid #e80c00;
-  background-color: aquamarine;
+  background-color: #fff;
   img {
     display: block;
     margin: 0 auto;

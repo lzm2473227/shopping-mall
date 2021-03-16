@@ -21,19 +21,6 @@
         </div>
       </div>
       <Product></Product>
-      <div class="pager">
-        <button>首页</button>
-        <button>上一页</button>
-        <span>1</span>/4
-        <button>下一页</button>
-        <button>尾页</button>
-        <div>
-          跳转至
-          <input type="text" placeholder="1" />
-          页
-        </div>
-        <button>Go</button>
-      </div>
     </div>
   </div>
 </template>
@@ -67,9 +54,6 @@ export default {
     padding-right: 10px;
   }
 }
-// .kind {
-//
-// }
 .brandShop {
   width: 100%;
   background-color: #ebebeb;
@@ -104,26 +88,6 @@ export default {
     color: #fff;
     margin-bottom: 15px;
     background-color: red;
-  }
-}
-
-.pager {
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  button {
-    margin: 0 20px;
-    height: 28px;
-  }
-  input {
-    width: 30px;
-    height: 26px;
-    margin: 0 20px;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    text-indent: 10px;
-    outline: none;
   }
 }
 </style>
