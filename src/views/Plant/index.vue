@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="hot-outer">
-        <div class="hot">
+        <div class="hot" @click="$router.push('/detail')">
           <ul>
             <li>
               <img src="../../assets/images/茅台12.png" alt="飞天茅台" />
