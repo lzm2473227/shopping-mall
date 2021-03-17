@@ -10,7 +10,11 @@
       <div class="detail-con">
         <div class="con-left">
           <div>
-            <img src="../../../assets/images/茅台12.png" alt="茅台主图" />
+            <img
+              class="big-img"
+              src="../../../assets/images/detail/21346e85-04f5-46fb-b59c-6f12f7ebc35a.jpg"
+              alt="茅台主图"
+            />
           </div>
           <div>
             <ul class="det-banner">
@@ -225,7 +229,6 @@ export default {
 <style lang="less" scoped>
 .PlantDetail {
   width: 100%;
-  background-color: #bfc;
 }
 .detail-outer {
   width: 1200px;
@@ -254,6 +257,29 @@ export default {
 }
 .detail-con {
   width: 1200px;
+  height: 680px;
+  box-sizing: border-box;
+  padding: 30px 0;
   margin: 0 auto;
+  border: 1px solid rgb(253, 114, 1);
+  display: flex;
+}
+.con-left {
+  .big-img {
+    width: 380px;
+    height: 380px;
+    border: 1px solid #eeeeee;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    li {
+      width: 68px;
+      height: 68px;
+      border: 1px solid #eeeeee;
+      box-sizing: border-box;
+    }
+  }
 }
 </style>
