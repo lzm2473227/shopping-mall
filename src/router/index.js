@@ -13,6 +13,8 @@ const ShopCart = () => import("../views/ShopCart");
 const Order = () => import("../views/Order");
 const HelpCenter = () => import("../views/HelpCenter");
 const Plant = () => import("../views/Plant");
+const PlantDetail = () => import("../views/Plant/PlantDetail");
+const PlantHome = () => import("../views/Plant/PlantHome");
 // const Trade = () => import("../views/Trade");
 // const Pay = () => import("../views/Pay");
 // const PaySuccess = () => import("../views/PaySuccess");
@@ -81,6 +83,18 @@ const routes = [
     path: "/plant",
     name: "Plant",
     component: Plant,
+    children: [
+      {
+        path: 'plantdetail',
+        name: "PlantDetail",
+        component: PlantDetail,
+      },
+      {
+        path: '',
+        name: "PlantHome",
+        component: PlantHome,
+      }
+    ]
   },
   {
     path: "/detail",
