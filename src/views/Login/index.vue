@@ -301,8 +301,8 @@ export default {
   margin-left: 50%;
   transform: translateX(-50%);
   input {
+    width: 278px;
     box-sizing: border-box;
-    margin-bottom: 1px;
     outline: none;
     height: 42px;
     padding-left: 10px;

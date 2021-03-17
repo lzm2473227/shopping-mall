@@ -177,7 +177,7 @@ export default {
     font-size: 24px;
     line-height: 28px;
     height: 28px;
-    color: #a92112;
+    color: #E80C00;
   }
   span.tag {
     font-size: 14px;

@@ -121,7 +121,7 @@ export default {
   height: 46px;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
 }
 .triangle {
   border-width: 7px 4px;
@@ -163,7 +163,7 @@ export default {
 .type-list a {
   padding: 0 24.5px;
   color: #888888;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   opacity: 1;
 }

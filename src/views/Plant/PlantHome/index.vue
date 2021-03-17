@@ -3,7 +3,7 @@
     <div class="classification">
       <div class="kind"><span>全部结果</span><span> > </span></div>
       <div class="kind"><span>签约工作</span><span> > </span></div>
-      <div><span>工厂店铺</span><span> > </span></div>
+      <div class="kind-last"><span>工厂店铺</span><span> X </span></div>
     </div>
     <div class="classify">
       <div class="variety">
@@ -49,10 +49,10 @@
         </div>
       </div>
       <div class="hot-outer">
-        <div class="hot" @click="$router.push('/detail')">
+        <div class="hot" @click="$router.push('/plant/plantdetail')">
           <ul>
             <li>
-              <img src="../../../assets/images/茅台12.png" alt="飞天茅台" />
+              <img src="@/assets/images/茅台12.png" alt="飞天茅台" />
             </li>
             <li class="hot-border"></li>
             <li class="hot-h2">贵州茅台酒（新飞天500ml）</li>
@@ -88,7 +88,7 @@
         <div class="hot">
           <ul>
             <li>
-              <img src="../../../assets/images/茅台12.png" alt="飞天茅台" />
+              <img src="@/assets/images/茅台12.png" alt="飞天茅台" />
             </li>
             <li class="hot-border"></li>
             <li class="hot-h2">贵州茅台酒（新飞天500ml）</li>
@@ -124,6 +124,9 @@ export default {
 }
 .kind {
   color: #999999;
+}
+.kind-last {
+  color: #333;
 }
 .classify {
   background: url("../../../assets/images/detail/底.png");
