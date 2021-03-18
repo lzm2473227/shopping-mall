@@ -284,13 +284,14 @@ export default {
   }
 }
 .icon-show {
-  box-sizing: border-box;
-  float: right;
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .inp-id {
   box-sizing: border-box;

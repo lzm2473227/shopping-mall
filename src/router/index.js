@@ -53,11 +53,13 @@ const routes = [
     path: "/learning",
     name: "Learning",
     component: Learning,
-    children: [{
-      path: 'learndetails',
-      name: "LearnDetails",
-      component: LearnDetails,
-    }]
+    children: [
+      {
+        path: "learndetails",
+        name: "LearnDetails",
+        component: LearnDetails,
+      },
+    ],
   },
   {
     path: "/search",
@@ -68,6 +70,9 @@ const routes = [
     path: "/shopCart",
     name: "ShopCart",
     component: ShopCart,
+    meta: {
+      isHideHeader: true,
+    },
   },
   {
     path: "/order",
@@ -85,16 +90,16 @@ const routes = [
     component: Plant,
     children: [
       {
-        path: 'plantdetail',
+        path: "plantdetail",
         name: "PlantDetail",
         component: PlantDetail,
       },
       {
-        path: '',
+        path: "",
         name: "PlantHome",
         component: PlantHome,
-      }
-    ]
+      },
+    ],
   },
   {
     path: "/detail",
