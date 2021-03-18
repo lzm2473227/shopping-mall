@@ -10,7 +10,7 @@ const LearnDetails = () => import("../views/Learning/LearnDetails");
 const Detail = () => import("../views/Detail");
 // const AddCartSuccess = () => import("../views/AddCartSuccess");
 const ShopCart = () => import("../views/ShopCart");
-const Order = () => import("../views/Order");
+const Order = () => import("@/views/Order");
 const HelpCenter = () => import("../views/HelpCenter");
 const Plant = () => import("../views/Plant");
 const PlantDetail = () => import("../views/Plant/PlantDetail");

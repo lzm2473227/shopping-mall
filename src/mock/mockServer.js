@@ -5,6 +5,7 @@ import rbanners from "./rbanners.json";
 Mock.mock("/mock/rbanners", "get", {
   code: 200,
   "data|4": rbanners,
+  
 });
 // Mock.mock("/mock/floors", "get", {
 //   code: 200,
