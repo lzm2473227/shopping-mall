@@ -22,8 +22,7 @@ const PlantHome = () => import("../views/Plant/PlantHome");
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "Home",
     component: Home,
@@ -53,13 +52,11 @@ const routes = [
     path: "/learning",
     name: "Learning",
     component: Learning,
-    children: [
-      {
-        path: "learndetails",
-        name: "LearnDetails",
-        component: LearnDetails,
-      },
-    ],
+    children: [{
+      path: "learndetails",
+      name: "LearnDetails",
+      component: LearnDetails,
+    }, ],
   },
   {
     path: "/search",
@@ -88,8 +85,7 @@ const routes = [
     path: "/plant",
     name: "Plant",
     component: Plant,
-    children: [
-      {
+    children: [{
         path: "plantdetail",
         name: "PlantDetail",
         component: PlantDetail,
@@ -114,6 +110,15 @@ const routes = [
 
 const router = new VueRouter({
   routes,
+  // mode: 'history', // 不带#
+  // 设置路由跳转的时候,滚动的位置
+  scrollBehavior(to, from, savedPosition) {
+    // x---横坐标,y----纵坐标
+    return {
+      x: 0,
+      y: 0
+    }
+  }
 });
 
 export default router;
