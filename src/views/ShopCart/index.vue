@@ -1,62 +1,137 @@
 <template>
-  <div class="header">
-    <div class="header-top">
-      <div class="header-container">
-        <div class="login-list">
-          <p class="header-active">欢迎来到凯华商城！</p>
-          <div class="align">
-            <router-link to="/login" class="login-margin">请登录</router-link>
-            <div class="site-nav-pipe">|</div>
-            <router-link to="/register" class="register header-active"
-              >我要注册</router-link
-            >
+  <div class="outer">
+    <div class="header">
+      <div class="header-top">
+        <div class="header-container">
+          <div class="login-list">
+            <p class="header-active">欢迎来到凯华商城！</p>
+            <div class="align">
+              <router-link to="/login" class="login-margin">请登录</router-link>
+              <div class="site-nav-pipe">|</div>
+              <router-link to="/register" class="register header-active"
+                >我要注册</router-link
+              >
+            </div>
+          </div>
+          <div class="type-list">
+            <router-link to="/shopcart" class="shopcart">
+              <img
+                src="../../assets/images/home/ic-购物车.png"
+                class="icon-shopcart"
+                alt="购物车"
+              />
+              购物车<span>0</span>
+              <div class="triangle"></div>
+            </router-link>
+            <i class="site-nav-pipe">|</i>
+            <router-link to="/order">我的订单</router-link>
+            <i class="site-nav-pipe">|</i>
+            <router-link to="/helpcenter">帮助中心</router-link>
           </div>
         </div>
-        <div class="type-list">
-          <router-link to="/shopcart" class="shopcart">
-            <img
-              src="../../assets/images/home/ic-购物车.png"
-              class="icon-shopcart"
-              alt="购物车"
+      </div>
+      <div class="header-center">
+        <div class="logo-content">
+          <div class="logo">
+            <router-link to="/">
+              <img src="../../assets/images/home/logo.png" alt="正品汇logo" />
+            </router-link>
+            <div class="logo-text">
+              <h1>正品汇</h1>
+              <div>kaihua.com</div>
+            </div>
+          </div>
+        </div>
+        <div class="location header-active">
+          <img src="../../assets/images/home/ic-定位.png" alt="" />
+          <span>深圳市</span>
+        </div>
+        <div class="header-search">
+          <form action="" class="search-form">
+            <input
+              type="text"
+              id="autocomplete"
+              placeholder="请输入名称、货号、规格、品牌、商家名称进行搜索"
             />
-            购物车<span>0</span>
-            <div class="triangle"></div>
-          </router-link>
-          <i class="site-nav-pipe">|</i>
-          <router-link to="/order">我的订单</router-link>
-          <i class="site-nav-pipe">|</i>
-          <router-link to="/helpcenter">帮助中心</router-link>
+            <button class="btn-danger" type="button" @click="toSearch">
+              <img src="../../assets/images/home/ic-搜索.png" alt="" />
+              <span>搜索</span>
+            </button>
+          </form>
         </div>
       </div>
     </div>
-    <div class="header-center">
-      <div class="logo-content">
-        <div class="logo">
-          <router-link to="/">
-            <img src="../../assets/images/home/logo.png" alt="正品汇logo" />
-          </router-link>
-          <div class="logo-text">
-            <h1>正品汇</h1>
-            <div>kaihua.com</div>
-          </div>
+    <div class="hint">
+      <img src="../../assets/images/ic-温馨提示.png" alt="温馨提示" />
+      <p>温馨提示：请前往凯华门店PDA进行下单！</p>
+    </div>
+    <div class="all-goods">
+      <div class="delivery-goods">
+        <h4>全部商品 3</h4>
+        <div class="site">
+          配置至：<select>
+            <option value="1">aaaaa</option>
+            <option value="1">bbbb</option>
+          </select>
+          <!-- <img src="../../assets/images/ic-返回.png" alt="" /> -->
         </div>
       </div>
-      <div class="location header-active">
-        <img src="../../assets/images/home/ic-定位.png" alt="" />
-        <span>深圳市</span>
-      </div>
-      <div class="header-search">
-        <form action="" class="search-form">
-          <input
-            type="text"
-            id="autocomplete"
-            placeholder="请输入名称、货号、规格、品牌、商家名称进行搜索"
-          />
-          <button class="btn-danger" type="button" @click="toSearch">
-            <img src="../../assets/images/home/ic-搜索.png" alt="" />
-            <span>搜索</span>
-          </button>
-        </form>
+      <div class="cart-main">
+        <div class="cart-th">
+          <div class="cart-th1">
+            <input type="checkbox" class="chooseAll" />全选
+          </div>
+          <div class="cart-th2">商品</div>
+          <div class="cart-th3">批发价</div>
+          <div class="cart-th4">数量</div>
+          <div class="cart-th5">小计</div>
+          <div class="cart-th6">操作</div>
+        </div>
+        <div class="cart-body">
+          <h5><input type="checkbox" />贵州茅台工厂店</h5>
+          <ul>
+            <li class="cart-list-con1"><input type="checkbox" /></li>
+            <li class="cart-list-con2">
+              <img src="../../assets/images/茅台12.png" alt="茅台" />
+              <a href="javascript:;"
+                >贵州茅台酒(贵州飞天茅台酒)53度 500ml单瓶装 口感酱香型</a
+              >
+              <p>贵州飞天茅台酒 500ml单瓶装</p>
+            </li>
+            <li class="cart-list-con3">￥1499.00</li>
+            <li class="cart-list-con5">
+              <button>-</button>
+              <input type="text" value="1" />
+              <button>+</button>
+            </li>
+            <li class="cart-list-con5">1563</li>
+            <li class="cart-list-con6">
+              <a href="javascript:;">删除</a>
+              <!-- <br /> -->
+              <a href="javascript:;">移到收藏</a>
+            </li>
+          </ul>
+        </div>
+        <div class="cart-tool">
+          <div class="select-all">
+            <input type="checkbox" class="chooseAll" />
+            <span>全选</span>
+          </div>
+          <div class="option">
+            <a href="javascript:;">删除选中商品</a>
+          </div>
+          <div>
+            已选择 <span>1</span>件商品
+            <img src="../../assets/images/ic-展开.png" alt="展开" />
+          </div>
+          <div class="total-price">
+            <span>总价</span>
+            <div><span class="tag">￥</span> <span>5328.00</span></div>
+          </div>
+          <div class="create-order">
+            <button>生成订单</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -243,5 +318,42 @@ textarea::-webkit-input-placeholder {
 }
 ::-moz-placeholder {
   color: #999999;
+}
+.hint {
+  width: 1200px;
+  margin: 0 auto;
+  height: 40px;
+  background: #fff9f2;
+  border: 1px solid #ffe5c2;
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 20px;
+  box-sizing: border-box;
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}
+.all-goods {
+  width: 1200px;
+  margin: 0 auto;
+  .delivery-goods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 23px 0;
+    h4 {
+      height: 31px;
+      font-size: 24px;
+      line-height: 31px;
+      color: #e80c00;
+    }
+    .site {
+      height: 24px;
+      font-size: 18px;
+      line-height: 24px;
+      color: #333333;
+    }
+  }
 }
 </style>

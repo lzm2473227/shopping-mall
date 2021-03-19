@@ -31,14 +31,12 @@
 </template>
 
 <script>
-
 export default {
   name: "Plant",
   data() {
     return {};
   },
   methods: {},
-  
 };
 </script>
 
@@ -93,6 +91,7 @@ export default {
   // background: #de0607;
   width: 1200px;
   margin: 0 auto;
+  padding-left: 20px;
   .plant-collect {
     text-align: center;
     span {
@@ -143,5 +142,4 @@ export default {
   display: flex;
   align-items: center;
 }
-
 </style>

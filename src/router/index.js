@@ -53,10 +53,10 @@ const routes = [{
     name: "Learning",
     component: Learning,
     children: [{
-      path: "learndetails",
+      path: 'learndetails',
       name: "LearnDetails",
       component: LearnDetails,
-    }, ],
+    }]
   },
   {
     path: "/search",
@@ -86,16 +86,16 @@ const routes = [{
     name: "Plant",
     component: Plant,
     children: [{
-        path: "plantdetail",
+        path: 'plantdetail',
         name: "PlantDetail",
         component: PlantDetail,
       },
       {
-        path: "",
+        path: '',
         name: "PlantHome",
         component: PlantHome,
-      },
-    ],
+      }
+    ]
   },
   {
     path: "/detail",
@@ -110,7 +110,6 @@ const routes = [{
 
 const router = new VueRouter({
   routes,
-  // mode: 'history', // 不带#
   // 设置路由跳转的时候,滚动的位置
   scrollBehavior(to, from, savedPosition) {
     // x---横坐标,y----纵坐标

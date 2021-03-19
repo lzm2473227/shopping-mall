@@ -1,6 +1,7 @@
 // import request from "@utils/request";
 import mockRequest from "@/utils/mockRequest";
 //获取首页三级分类
+
 // export const reqGetBaseList = () => {
 //   return request({
 //     method: "GET",
@@ -14,4 +15,10 @@ export const reqGetBanners = () => {
     url: "/rbanners"
   });
 };
-
+//获取首页楼层数据
+// export const reqGetFoors = () => {
+//   return mockRequest({
+//     method: "GET",
+//     url: "/floors"
+//   });
+// };

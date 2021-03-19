@@ -72,7 +72,7 @@
             </div>
           </div>
           <div class="maotai">
-            <button class="toShopCart" @click="toShopCart">
+            <button class="toShopCart" @click="toShopCart(10, $event)">
               <img
                 src="../../../assets/images/detail/ic-购物车.png"
                 alt="购物车图标"
@@ -234,6 +234,12 @@
             alt=""
           />
         </div>
+        <!-- <div>
+          <p>品牌<span>茅台（MOUTAI）</span></p>
+          <div>
+            <span>白酒</span>
+          </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -246,8 +252,9 @@ export default {
     return {};
   },
   methods: {
-    toShopCart() {
+    toShopCart(id, e) {
       this.$router.push("/shopcart");
+      console.log(id, e);
     },
   },
 };
