@@ -99,16 +99,16 @@
               <p>贵州飞天茅台酒 500ml单瓶装</p>
             </li>
             <li class="cart-list-con3">￥1499.00</li>
-            <li class="cart-list-con5">
+            <li class="cart-list-con4">
               <button>-</button>
               <input type="text" value="1" />
               <button>+</button>
             </li>
-            <li class="cart-list-con5">1563</li>
+            <li class="cart-list-con5">￥1563</li>
             <li class="cart-list-con6">
-              <a href="javascript:;">删除</a>
-              <!-- <br /> -->
               <a href="javascript:;">移到收藏</a>
+              <br />
+              <a href="javascript:;">删除</a>
             </li>
           </ul>
         </div>
@@ -353,6 +353,97 @@ textarea::-webkit-input-placeholder {
       font-size: 18px;
       line-height: 24px;
       color: #333333;
+      select {
+        width: 282px;
+        height: 38px;
+        background: #ffffff;
+        border: 1px solid #dddddd;
+        font-size: 16px;
+      }
+    }
+  }
+}
+.cart-th {
+  width: 1200px;
+  height: 40px;
+  background: #f5f5f5;
+  border: 1px solid #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-body {
+  ul {
+    display: flex;
+    .cart-list-con1 {
+      margin-right: 12px;
+    }
+    .cart-list-con2 {
+      display: flex;
+      img {
+        width: 86px;
+        height: 86px;
+        border: 1px solid #efefef;
+      }
+      a {
+        width: 270px;
+        height: 52px;
+        font-size: 18px;
+        color: #333333;
+        padding-left: 12px;
+      }
+      p {
+        width: 126px;
+        height: 52px;
+        font-size: 18px;
+        color: #666666;
+        padding-left: 30px;
+      }
+    }
+    .cart-list-con3 {
+      width: 86px;
+      height: 24px;
+      font-size: 18px;
+      color: #333333;
+      padding-left: 92px;
+    }
+    .cart-list-con4 {
+      display: flex;
+      padding-left: 50px;
+      button {
+        width: 32px;
+        height: 32px;
+        background: #f5f5f5;
+        border: 1px solid #cccccc;
+        outline: none;
+      }
+      input {
+        text-indent: 20px;
+        width: 51px;
+        height: 32px;
+        border: 1px solid #cccccc;
+        background: #ffffff;
+        box-sizing: border-box;
+      }
+    }
+    .cart-list-con5 {
+      width: 90px;
+      height: 24px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333333;
+      padding-left: 50px;
+    }
+    .cart-list-con6{
+      padding-left: 50px;
+    }
+  }
+
+  h5 {
+    margin: 20px 0 12px 0;
+    font-size: 18px;
+    input {
+      margin-right: 12px;
     }
   }
 }
