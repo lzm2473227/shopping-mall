@@ -112,6 +112,53 @@
             </li>
           </ul>
         </div>
+        <div class="cart-body">
+          <h5><input type="checkbox" />贵州茅台工厂店</h5>
+          <ul>
+            <li class="cart-list-con1"><input type="checkbox" /></li>
+            <li class="cart-list-con2">
+              <img src="../../assets/images/茅台12.png" alt="茅台" />
+              <a href="javascript:;"
+                >贵州茅台酒(贵州飞天茅台酒)53度 500ml单瓶装 口感酱香型</a
+              >
+              <p>贵州飞天茅台酒 500ml单瓶装</p>
+            </li>
+            <li class="cart-list-con3">￥1499.00</li>
+            <li class="cart-list-con4">
+              <button>-</button>
+              <input type="text" value="1" />
+              <button>+</button>
+            </li>
+            <li class="cart-list-con5">￥1563</li>
+            <li class="cart-list-con6">
+              <a href="javascript:;">移到收藏</a>
+              <br />
+              <a href="javascript:;">删除</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="cart-list-con1"><input type="checkbox" /></li>
+            <li class="cart-list-con2">
+              <img src="../../assets/images/茅台12.png" alt="茅台" />
+              <a href="javascript:;"
+                >贵州茅台酒(贵州飞天茅台酒)53度 500ml单瓶装 口感酱香型</a
+              >
+              <p>贵州飞天茅台酒 500ml单瓶装</p>
+            </li>
+            <li class="cart-list-con3">￥1499.00</li>
+            <li class="cart-list-con4">
+              <button>-</button>
+              <input type="text" value="1" />
+              <button>+</button>
+            </li>
+            <li class="cart-list-con5">￥1563</li>
+            <li class="cart-list-con6">
+              <a href="javascript:;">移到收藏</a>
+              <br />
+              <a href="javascript:;">删除</a>
+            </li>
+          </ul>
+        </div>
         <div class="cart-tool">
           <div class="select-all">
             <input type="checkbox" class="chooseAll" />
@@ -120,12 +167,12 @@
           <div class="option">
             <a href="javascript:;">删除选中商品</a>
           </div>
-          <div>
+          <div class="choose">
             已选择 <span>1</span>件商品
             <img src="../../assets/images/ic-展开.png" alt="展开" />
           </div>
           <div class="total-price">
-            <span>总价</span>
+            <p>总价：</p>
             <div><span class="tag">￥</span> <span>5328.00</span></div>
           </div>
           <div class="create-order">
@@ -308,6 +355,7 @@ form {
     }
   }
 }
+
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #999999;
@@ -337,6 +385,14 @@ textarea::-webkit-input-placeholder {
 .all-goods {
   width: 1200px;
   margin: 0 auto;
+  input {
+    width: 16px;
+    height: 16px;
+  }
+  input:first-child {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
   .delivery-goods {
     display: flex;
     justify-content: space-between;
@@ -370,13 +426,35 @@ textarea::-webkit-input-placeholder {
   border: 1px solid #dddddd;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  .cart-th1 {
+    padding-right: 94px;
+  }
+  .cart-th2 {
+    padding-right: 462px;
+  }
+  .cart-th3 {
+    padding-right: 82px;
+  }
+  .cart-th4 {
+    padding-right: 139px;
+  }
+  .cart-th5 {
+    padding-right: 104px;
+  }
 }
 .cart-body {
+  ul:first-of-type {
+    border-top: 2px solid #ffa23d;
+  }
   ul {
     display: flex;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    height: 139px;
+    padding-top: 23px;
+    box-sizing: border-box;
     .cart-list-con1 {
-      margin-right: 12px;
+      // margin-top: -72px;
     }
     .cart-list-con2 {
       display: flex;
@@ -434,8 +512,11 @@ textarea::-webkit-input-placeholder {
       color: #333333;
       padding-left: 50px;
     }
-    .cart-list-con6{
+    .cart-list-con6 {
       padding-left: 50px;
+      a {
+        display: block;
+      }
     }
   }
 
@@ -445,6 +526,80 @@ textarea::-webkit-input-placeholder {
     input {
       margin-right: 12px;
     }
+  }
+}
+.cart-tool {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  height: 60px;
+  background: #f8f8f8;
+  box-sizing: border-box;
+  border: 1px solid #ededed;
+  .select-all {
+    font-size: 18px;
+    color: #333333;
+  }
+  .option {
+    width: 108px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    padding-left: 40px;
+    a {
+      color: #666666;
+    }
+  }
+  .choose {
+    height: 21px;
+    line-height: 21px;
+    font-size: 16px;
+    color: #333333;
+    padding-left: 500px;
+    span {
+      color: #e80c00;
+    }
+    img {
+      width: 16px;
+      height: 16px;
+      line-height: 29px;
+    }
+  }
+  .total-price {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    p {
+      display: flex;
+      height: 21px;
+      line-height: 21px;
+      font-size: 16px;
+      color: #333333;
+    }
+    div {
+      display: flex;
+      height: 31px;
+      line-height: 31px;
+      span {
+        font-size: 24px;
+        color: #e80c00;
+      }
+      .tag {
+        font-size: 14px;
+      }
+    }
+  }
+  .create-order {
+    padding-left: 30px;
+  }
+  button {
+    width: 130px;
+    height: 60px;
+    background: #e80c00;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
   }
 }
 </style>
