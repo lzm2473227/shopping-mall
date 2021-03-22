@@ -1,34 +1,6 @@
 <template>
   <header class="header">
-    <div class="header-top">
-      <div class="header-container">
-        <div class="login-list">
-          <p class="header-active">欢迎来到凯华商城！</p>
-          <div class="align">
-            <router-link to="/login" class="login-margin">请登录</router-link>
-            <div class="site-nav-pipe">|</div>
-            <router-link to="/register" class="register header-active"
-              >我要注册</router-link
-            >
-          </div>
-        </div>
-        <div class="type-list">
-          <router-link to="/shopcart" class="shopcart">
-            <img
-              src="../../assets/images/home/ic-购物车.png"
-              class="icon-shopcart"
-              alt="购物车"
-            />
-            购物车<span>0</span>
-            <div class="triangle"></div>
-          </router-link>
-          <i class="site-nav-pipe">|</i>
-          <router-link to="/order">我的订单</router-link>
-          <i class="site-nav-pipe">|</i>
-          <router-link to="/helpcenter">帮助中心</router-link>
-        </div>
-      </div>
-    </div>
+    <HeaderTop />
     <div class="header-center">
       <div class="logo-content">
         <div class="logo">
@@ -91,6 +63,7 @@
 </template>
 
 <script>
+import HeaderTop from "@/components/HeaderTop"
 export default {
   name: "Header",
   data() {
@@ -100,6 +73,9 @@ export default {
     toSearch() {
       this.$router.replace("/search");
     },
+  },
+  components: {
+    HeaderTop,
   },
 };
 </script>

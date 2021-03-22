@@ -11,11 +11,11 @@ const Detail = () => import("../views/Detail");
 // const AddCartSuccess = () => import("../views/AddCartSuccess");
 const ShopCart = () => import("../views/ShopCart");
 const Order = () => import("@/views/Order");
+const Trade = () => import("@/views/Trade");
 const HelpCenter = () => import("../views/HelpCenter");
 const Plant = () => import("../views/Plant");
 const PlantDetail = () => import("../views/Plant/PlantDetail");
 const PlantHome = () => import("../views/Plant/PlantHome");
-// const Trade = () => import("../views/Trade");
 // const Pay = () => import("../views/Pay");
 // const PaySuccess = () => import("../views/PaySuccess");
 // const Center = () => import("../views/Center");
@@ -75,6 +75,14 @@ const routes = [{
     path: "/order",
     name: "Order",
     component: Order,
+  },
+  {
+    path: "/trade",
+    name: "Trade",
+    component: Trade,
+    meta: {
+      isHideHeader: true,
+    },
   },
   {
     path: "/helpcenter",
